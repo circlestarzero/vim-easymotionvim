@@ -55,9 +55,9 @@ describe 'word motions'
     before
         new
         let g:EasyMotion_keys = '123456789'
-        omap f <Plug>(easymotion-f)
-        omap w <Plug>(easymotion-w)
-        omap b <Plug>(easymotion-b)
+        omap f <Plug>(easymotionvim-f)
+        omap w <Plug>(easymotionvim-w)
+        omap b <Plug>(easymotionvim-b)
         call EasyMotion#init()
         call AddLine('vim deco vim deco vim deco')
         "             123456789012345678901234567890
@@ -67,7 +67,7 @@ describe 'word motions'
         close!
     end
 
-    it '<Plug>(easymotion-w)'
+    it '<Plug>(easymotionvim-w)'
         " Default position
         normal! 0
         let l = line('.')
@@ -87,7 +87,7 @@ describe 'word motions'
         Expect CursorPos() == [l,1,'v']
     end
 
-    it '<Plug>(easymotion-b)'
+    it '<Plug>(easymotionvim-b)'
         " Default position
         normal! $
         let l = line('.')

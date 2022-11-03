@@ -991,7 +991,7 @@ function! s:PromptUser(groups) "{{{
     for dict_key in sort(coord_key_dict[0])
         " NOTE: {{{
         " let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        " Perform <Plug>(easymotion-w)
+        " Perform <Plug>(easymotionvim-w)
         "
         " lines[line_num]['orig']:
         "   Lorem ipsum dolor sit amet consectetur adipisicing
@@ -1539,7 +1539,7 @@ function! s:EasyMotion(regexp, direction, visualmode, is_inclusive, ...) " {{{
             let s:dot_repeat.bd_t_flag = s:flag.bd_t " Bidirectional t motion
             let s:dot_repeat.true_direction = true_direction " Check inclusive
             "}}}
-            silent! call repeat#set("\<Plug>(easymotion-dotrepeat)")
+            silent! call repeat#set("\<Plug>(easymotionvim-dotrepeat)")
         endif "}}}
 
         " Highlight all the matches by n-key find motions {{{

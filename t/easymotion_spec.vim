@@ -41,179 +41,179 @@ describe 'Default settings'
     it 'provide default <Plug> mappings for find motion'
         " Find Motion: {{{
         " s
-        Expect maparg('<Plug>(easymotion-s)', 'n') ==# ':<C-U>call EasyMotion#S(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-s)', 'o') ==# ':<C-U>call EasyMotion#S(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-s)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-s)', 'n') ==# ':<C-U>call EasyMotion#S(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-s)', 'o') ==# ':<C-U>call EasyMotion#S(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-s)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>'
         " f
-        Expect maparg('<Plug>(easymotion-f)', 'n') ==# ':<C-U>call EasyMotion#S(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-f)', 'o') ==# ':<C-U>call EasyMotion#S(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-f)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-f)', 'n') ==# ':<C-U>call EasyMotion#S(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-f)', 'o') ==# ':<C-U>call EasyMotion#S(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-f)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(1,1,0)<CR>'
         " F
-        Expect maparg('<Plug>(easymotion-F)', 'n') ==# ':<C-U>call EasyMotion#S(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-F)', 'o') ==# ':<C-U>call EasyMotion#S(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-F)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-F)', 'n') ==# ':<C-U>call EasyMotion#S(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-F)', 'o') ==# ':<C-U>call EasyMotion#S(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-F)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(1,1,1)<CR>'
         " bd-f
-        Expect maparg('<Plug>(easymotion-bd-f)', 'n') ==# maparg('<Plug>(easymotion-s)', 'n')
-        Expect maparg('<Plug>(easymotion-bd-f)', 'o') ==# maparg('<Plug>(easymotion-s)', 'o')
-        Expect maparg('<Plug>(easymotion-bd-f)', 'v') ==# maparg('<Plug>(easymotion-s)', 'v')
+        Expect maparg('<Plug>(easymotionvim-bd-f)', 'n') ==# maparg('<Plug>(easymotion-s)', 'n')
+        Expect maparg('<Plug>(easymotionvim-bd-f)', 'o') ==# maparg('<Plug>(easymotion-s)', 'o')
+        Expect maparg('<Plug>(easymotionvim-bd-f)', 'v') ==# maparg('<Plug>(easymotion-s)', 'v')
         " t
-        Expect maparg('<Plug>(easymotion-t)', 'n') ==# ':<C-U>call EasyMotion#T(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-t)', 'o') ==# ':<C-U>call EasyMotion#T(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-t)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-t)', 'n') ==# ':<C-U>call EasyMotion#T(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-t)', 'o') ==# ':<C-U>call EasyMotion#T(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-t)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(1,1,0)<CR>'
         " T
-        Expect maparg('<Plug>(easymotion-T)', 'n') ==# ':<C-U>call EasyMotion#T(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-T)', 'o') ==# ':<C-U>call EasyMotion#T(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-T)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-T)', 'n') ==# ':<C-U>call EasyMotion#T(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-T)', 'o') ==# ':<C-U>call EasyMotion#T(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-T)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(1,1,1)<CR>'
         " bd-t
-        Expect maparg('<Plug>(easymotion-bd-t)', 'n') ==# ':<C-U>call EasyMotion#T(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-t)', 'o') ==# ':<C-U>call EasyMotion#T(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-t)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-t)', 'n') ==# ':<C-U>call EasyMotion#T(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-t)', 'o') ==# ':<C-U>call EasyMotion#T(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-t)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(1,1,2)<CR>'
         " sl
-        Expect maparg('<Plug>(easymotion-sl)', 'n') ==# ':<C-U>call EasyMotion#SL(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sl)', 'o') ==# ':<C-U>call EasyMotion#SL(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sl)', 'n') ==# ':<C-U>call EasyMotion#SL(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sl)', 'o') ==# ':<C-U>call EasyMotion#SL(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>'
         " fl
-        Expect maparg('<Plug>(easymotion-fl)', 'n') ==# ':<C-U>call EasyMotion#SL(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fl)', 'o') ==# ':<C-U>call EasyMotion#SL(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fl)', 'n') ==# ':<C-U>call EasyMotion#SL(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fl)', 'o') ==# ':<C-U>call EasyMotion#SL(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(1,1,0)<CR>'
         " Fl
-        Expect maparg('<Plug>(easymotion-Fl)', 'n') ==# ':<C-U>call EasyMotion#SL(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fl)', 'o') ==# ':<C-U>call EasyMotion#SL(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fl)', 'n') ==# ':<C-U>call EasyMotion#SL(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fl)', 'o') ==# ':<C-U>call EasyMotion#SL(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(1,1,1)<CR>'
         " bd-fl
-        Expect maparg('<Plug>(easymotion-bd-fl)', 'n') ==# maparg('<Plug>(easymotion-sl)', 'n')
-        Expect maparg('<Plug>(easymotion-bd-fl)', 'o') ==# maparg('<Plug>(easymotion-sl)', 'o')
-        Expect maparg('<Plug>(easymotion-bd-fl)', 'v') ==# maparg('<Plug>(easymotion-sl)', 'v')
+        Expect maparg('<Plug>(easymotionvim-bd-fl)', 'n') ==# maparg('<Plug>(easymotion-sl)', 'n')
+        Expect maparg('<Plug>(easymotionvim-bd-fl)', 'o') ==# maparg('<Plug>(easymotion-sl)', 'o')
+        Expect maparg('<Plug>(easymotionvim-bd-fl)', 'v') ==# maparg('<Plug>(easymotion-sl)', 'v')
         " tl
-        Expect maparg('<Plug>(easymotion-tl)', 'n') ==# ':<C-U>call EasyMotion#TL(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tl)', 'o') ==# ':<C-U>call EasyMotion#TL(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tl)', 'n') ==# ':<C-U>call EasyMotion#TL(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tl)', 'o') ==# ':<C-U>call EasyMotion#TL(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(1,1,0)<CR>'
         " Tl
-        Expect maparg('<Plug>(easymotion-Tl)', 'n') ==# ':<C-U>call EasyMotion#TL(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tl)', 'o') ==# ':<C-U>call EasyMotion#TL(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tl)', 'n') ==# ':<C-U>call EasyMotion#TL(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tl)', 'o') ==# ':<C-U>call EasyMotion#TL(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(1,1,1)<CR>'
         " bd-tl
-        Expect maparg('<Plug>(easymotion-bd-tl)', 'n') ==# ':<C-U>call EasyMotion#TL(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tl)', 'o') ==# ':<C-U>call EasyMotion#TL(1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tl)', 'n') ==# ':<C-U>call EasyMotion#TL(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tl)', 'o') ==# ':<C-U>call EasyMotion#TL(1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(1,1,2)<CR>'
         "}}}
 
         " Two Char Find Motion: {{{
         " s2
-        Expect maparg('<Plug>(easymotion-s2)', 'n') ==# ':<C-U>call EasyMotion#S(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-s2)', 'o') ==# ':<C-U>call EasyMotion#S(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-s2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-s2)', 'n') ==# ':<C-U>call EasyMotion#S(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-s2)', 'o') ==# ':<C-U>call EasyMotion#S(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-s2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>'
         " f2
-        Expect maparg('<Plug>(easymotion-f2)', 'n') ==# ':<C-U>call EasyMotion#S(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-f2)', 'o') ==# ':<C-U>call EasyMotion#S(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-f2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(2,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-f2)', 'n') ==# ':<C-U>call EasyMotion#S(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-f2)', 'o') ==# ':<C-U>call EasyMotion#S(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-f2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(2,1,0)<CR>'
         " F2
-        Expect maparg('<Plug>(easymotion-F2)', 'n') ==# ':<C-U>call EasyMotion#S(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-F2)', 'o') ==# ':<C-U>call EasyMotion#S(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-F2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(2,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-F2)', 'n') ==# ':<C-U>call EasyMotion#S(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-F2)', 'o') ==# ':<C-U>call EasyMotion#S(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-F2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(2,1,1)<CR>'
         " bd-f2
-        Expect maparg('<Plug>(easymotion-bd-f2)', 'n') ==# maparg('<Plug>(easymotion-s2)', 'n')
-        Expect maparg('<Plug>(easymotion-bd-f2)', 'o') ==# maparg('<Plug>(easymotion-s2)', 'o')
-        Expect maparg('<Plug>(easymotion-bd-f2)', 'v') ==# maparg('<Plug>(easymotion-s2)', 'v')
+        Expect maparg('<Plug>(easymotionvim-bd-f2)', 'n') ==# maparg('<Plug>(easymotion-s2)', 'n')
+        Expect maparg('<Plug>(easymotionvim-bd-f2)', 'o') ==# maparg('<Plug>(easymotion-s2)', 'o')
+        Expect maparg('<Plug>(easymotionvim-bd-f2)', 'v') ==# maparg('<Plug>(easymotion-s2)', 'v')
         " t2
-        Expect maparg('<Plug>(easymotion-t2)', 'n') ==# ':<C-U>call EasyMotion#T(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-t2)', 'o') ==# ':<C-U>call EasyMotion#T(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-t2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(2,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-t2)', 'n') ==# ':<C-U>call EasyMotion#T(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-t2)', 'o') ==# ':<C-U>call EasyMotion#T(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-t2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(2,1,0)<CR>'
         " T2
-        Expect maparg('<Plug>(easymotion-T2)', 'n') ==# ':<C-U>call EasyMotion#T(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-T2)', 'o') ==# ':<C-U>call EasyMotion#T(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-T2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(2,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-T2)', 'n') ==# ':<C-U>call EasyMotion#T(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-T2)', 'o') ==# ':<C-U>call EasyMotion#T(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-T2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(2,1,1)<CR>'
         " sl2
-        Expect maparg('<Plug>(easymotion-sl2)', 'n') ==# ':<C-U>call EasyMotion#SL(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sl2)', 'o') ==# ':<C-U>call EasyMotion#SL(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sl2)', 'n') ==# ':<C-U>call EasyMotion#SL(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sl2)', 'o') ==# ':<C-U>call EasyMotion#SL(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>'
         " bd-t2
-        Expect maparg('<Plug>(easymotion-bd-t2)', 'n') ==# ':<C-U>call EasyMotion#T(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-t2)', 'o') ==# ':<C-U>call EasyMotion#T(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-t2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(2,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-t2)', 'n') ==# ':<C-U>call EasyMotion#T(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-t2)', 'o') ==# ':<C-U>call EasyMotion#T(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-t2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(2,1,2)<CR>'
         " fl2
-        Expect maparg('<Plug>(easymotion-fl2)', 'n') ==# ':<C-U>call EasyMotion#SL(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fl2)', 'o') ==# ':<C-U>call EasyMotion#SL(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(2,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fl2)', 'n') ==# ':<C-U>call EasyMotion#SL(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fl2)', 'o') ==# ':<C-U>call EasyMotion#SL(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(2,1,0)<CR>'
         " Fl2
-        Expect maparg('<Plug>(easymotion-Fl2)', 'n') ==# ':<C-U>call EasyMotion#SL(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fl2)', 'o') ==# ':<C-U>call EasyMotion#SL(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(2,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fl2)', 'n') ==# ':<C-U>call EasyMotion#SL(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fl2)', 'o') ==# ':<C-U>call EasyMotion#SL(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(2,1,1)<CR>'
         " bd-fl2
-        Expect maparg('<Plug>(easymotion-bd-fl2)', 'n') ==# maparg('<Plug>(easymotion-sl2)', 'n')
-        Expect maparg('<Plug>(easymotion-bd-fl2)', 'o') ==# maparg('<Plug>(easymotion-sl2)', 'o')
-        Expect maparg('<Plug>(easymotion-bd-fl2)', 'v') ==# maparg('<Plug>(easymotion-sl2)', 'v')
+        Expect maparg('<Plug>(easymotionvim-bd-fl2)', 'n') ==# maparg('<Plug>(easymotion-sl2)', 'n')
+        Expect maparg('<Plug>(easymotionvim-bd-fl2)', 'o') ==# maparg('<Plug>(easymotion-sl2)', 'o')
+        Expect maparg('<Plug>(easymotionvim-bd-fl2)', 'v') ==# maparg('<Plug>(easymotion-sl2)', 'v')
         " tl2
-        Expect maparg('<Plug>(easymotion-tl2)', 'n') ==# ':<C-U>call EasyMotion#TL(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tl2)', 'o') ==# ':<C-U>call EasyMotion#TL(2,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(2,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tl2)', 'n') ==# ':<C-U>call EasyMotion#TL(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tl2)', 'o') ==# ':<C-U>call EasyMotion#TL(2,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(2,1,0)<CR>'
         " Tl2
-        Expect maparg('<Plug>(easymotion-Tl2)', 'n') ==# ':<C-U>call EasyMotion#TL(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tl2)', 'o') ==# ':<C-U>call EasyMotion#TL(2,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(2,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tl2)', 'n') ==# ':<C-U>call EasyMotion#TL(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tl2)', 'o') ==# ':<C-U>call EasyMotion#TL(2,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(2,1,1)<CR>'
         " bd-tl2
-        Expect maparg('<Plug>(easymotion-bd-tl2)', 'n') ==# ':<C-U>call EasyMotion#TL(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tl2)', 'o') ==# ':<C-U>call EasyMotion#TL(2,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(2,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tl2)', 'n') ==# ':<C-U>call EasyMotion#TL(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tl2)', 'o') ==# ':<C-U>call EasyMotion#TL(2,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tl2)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(2,1,2)<CR>'
         "}}}
 
         " Multi Char Find Motion: {{{
         " sn
-        Expect maparg('<Plug>(easymotion-sn)', 'n') ==# ':<C-U>call EasyMotion#S(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sn)', 'o') ==# ':<C-U>call EasyMotion#S(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sn)', 'n') ==# ':<C-U>call EasyMotion#S(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sn)', 'o') ==# ':<C-U>call EasyMotion#S(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>'
         " fn
-        Expect maparg('<Plug>(easymotion-fn)', 'n') ==# ':<C-U>call EasyMotion#S(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fn)', 'o') ==# ':<C-U>call EasyMotion#S(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(-1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fn)', 'n') ==# ':<C-U>call EasyMotion#S(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fn)', 'o') ==# ':<C-U>call EasyMotion#S(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(-1,1,0)<CR>'
         " Fn
-        Expect maparg('<Plug>(easymotion-Fn)', 'n') ==# ':<C-U>call EasyMotion#S(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fn)', 'o') ==# ':<C-U>call EasyMotion#S(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(-1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fn)', 'n') ==# ':<C-U>call EasyMotion#S(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fn)', 'o') ==# ':<C-U>call EasyMotion#S(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#S(-1,1,1)<CR>'
         " bd-fn
-        Expect maparg('<Plug>(easymotion-bd-fn)', 'n') ==# maparg('<Plug>(easymotion-sn)', 'n')
-        Expect maparg('<Plug>(easymotion-bd-fn)', 'o') ==# maparg('<Plug>(easymotion-sn)', 'o')
-        Expect maparg('<Plug>(easymotion-bd-fn)', 'v') ==# maparg('<Plug>(easymotion-sn)', 'v')
+        Expect maparg('<Plug>(easymotionvim-bd-fn)', 'n') ==# maparg('<Plug>(easymotion-sn)', 'n')
+        Expect maparg('<Plug>(easymotionvim-bd-fn)', 'o') ==# maparg('<Plug>(easymotion-sn)', 'o')
+        Expect maparg('<Plug>(easymotionvim-bd-fn)', 'v') ==# maparg('<Plug>(easymotion-sn)', 'v')
         " tn
-        Expect maparg('<Plug>(easymotion-tn)', 'n') ==# ':<C-U>call EasyMotion#T(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tn)', 'o') ==# ':<C-U>call EasyMotion#T(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(-1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tn)', 'n') ==# ':<C-U>call EasyMotion#T(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tn)', 'o') ==# ':<C-U>call EasyMotion#T(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(-1,1,0)<CR>'
         " Tn
-        Expect maparg('<Plug>(easymotion-Tn)', 'n') ==# ':<C-U>call EasyMotion#T(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tn)', 'o') ==# ':<C-U>call EasyMotion#T(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(-1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tn)', 'n') ==# ':<C-U>call EasyMotion#T(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tn)', 'o') ==# ':<C-U>call EasyMotion#T(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(-1,1,1)<CR>'
         " bd-tn
-        Expect maparg('<Plug>(easymotion-bd-tn)', 'n') ==# ':<C-U>call EasyMotion#T(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tn)', 'o') ==# ':<C-U>call EasyMotion#T(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(-1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tn)', 'n') ==# ':<C-U>call EasyMotion#T(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tn)', 'o') ==# ':<C-U>call EasyMotion#T(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tn)', 'v') ==# '<Esc>:<C-U>call EasyMotion#T(-1,1,2)<CR>'
         " sln
-        Expect maparg('<Plug>(easymotion-sln)', 'n') ==# ':<C-U>call EasyMotion#SL(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sln)', 'o') ==# ':<C-U>call EasyMotion#SL(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sln)', 'n') ==# ':<C-U>call EasyMotion#SL(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sln)', 'o') ==# ':<C-U>call EasyMotion#SL(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>'
         " fln
-        Expect maparg('<Plug>(easymotion-fln)', 'n') ==# ':<C-U>call EasyMotion#SL(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fln)', 'o') ==# ':<C-U>call EasyMotion#SL(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-fln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(-1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fln)', 'n') ==# ':<C-U>call EasyMotion#SL(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fln)', 'o') ==# ':<C-U>call EasyMotion#SL(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-fln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(-1,1,0)<CR>'
         " Fln
-        Expect maparg('<Plug>(easymotion-Fln)', 'n') ==# ':<C-U>call EasyMotion#SL(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fln)', 'o') ==# ':<C-U>call EasyMotion#SL(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Fln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(-1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fln)', 'n') ==# ':<C-U>call EasyMotion#SL(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fln)', 'o') ==# ':<C-U>call EasyMotion#SL(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Fln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#SL(-1,1,1)<CR>'
         " bd-fln
-        Expect maparg('<Plug>(easymotion-bd-fln)', 'n') ==# maparg('<Plug>(easymotion-sln)', 'n')
-        Expect maparg('<Plug>(easymotion-bd-fln)', 'o') ==# maparg('<Plug>(easymotion-sln)', 'o')
-        Expect maparg('<Plug>(easymotion-bd-fln)', 'v') ==# maparg('<Plug>(easymotion-sln)', 'v')
+        Expect maparg('<Plug>(easymotionvim-bd-fln)', 'n') ==# maparg('<Plug>(easymotion-sln)', 'n')
+        Expect maparg('<Plug>(easymotionvim-bd-fln)', 'o') ==# maparg('<Plug>(easymotion-sln)', 'o')
+        Expect maparg('<Plug>(easymotionvim-bd-fln)', 'v') ==# maparg('<Plug>(easymotion-sln)', 'v')
         " tln
-        Expect maparg('<Plug>(easymotion-tln)', 'n') ==# ':<C-U>call EasyMotion#TL(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tln)', 'o') ==# ':<C-U>call EasyMotion#TL(-1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-tln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(-1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tln)', 'n') ==# ':<C-U>call EasyMotion#TL(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tln)', 'o') ==# ':<C-U>call EasyMotion#TL(-1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-tln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(-1,1,0)<CR>'
         " Tln
-        Expect maparg('<Plug>(easymotion-Tln)', 'n') ==# ':<C-U>call EasyMotion#TL(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tln)', 'o') ==# ':<C-U>call EasyMotion#TL(-1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-Tln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(-1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tln)', 'n') ==# ':<C-U>call EasyMotion#TL(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tln)', 'o') ==# ':<C-U>call EasyMotion#TL(-1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-Tln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(-1,1,1)<CR>'
         " bd-tln
-        Expect maparg('<Plug>(easymotion-bd-tln)', 'n') ==# ':<C-U>call EasyMotion#TL(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tln)', 'o') ==# ':<C-U>call EasyMotion#TL(-1,0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-tln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(-1,1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tln)', 'n') ==# ':<C-U>call EasyMotion#TL(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tln)', 'o') ==# ':<C-U>call EasyMotion#TL(-1,0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-tln)', 'v') ==# '<Esc>:<C-U>call EasyMotion#TL(-1,1,2)<CR>'
         "}}}
     end
 
@@ -224,219 +224,219 @@ describe 'Default settings'
         "   - 1: backward
         "   - 2: bi-direction
         " Word Motion: {{{
-        Expect maparg('<Plug>(easymotion-w)', 'n') ==# ':<C-U>call EasyMotion#WB(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-w)', 'o') ==# ':<C-U>call EasyMotion#WB(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WB(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-b)', 'n') ==# ':<C-U>call EasyMotion#WB(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-b)', 'o') ==# ':<C-U>call EasyMotion#WB(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-b)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WB(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-w)', 'n') ==# ':<C-U>call EasyMotion#WB(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-w)', 'o') ==# ':<C-U>call EasyMotion#WB(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WB(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-w)', 'n') ==# ':<C-U>call EasyMotion#WB(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-w)', 'o') ==# ':<C-U>call EasyMotion#WB(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WB(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-b)', 'n') ==# ':<C-U>call EasyMotion#WB(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-b)', 'o') ==# ':<C-U>call EasyMotion#WB(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-b)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WB(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-w)', 'n') ==# ':<C-U>call EasyMotion#WB(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-w)', 'o') ==# ':<C-U>call EasyMotion#WB(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WB(1,2)<CR>'
         " }}}
 
         " WORD Motion: {{{
-        Expect maparg('<Plug>(easymotion-W)', 'n') ==# ':<C-U>call EasyMotion#WBW(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-W)', 'o') ==# ':<C-U>call EasyMotion#WBW(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-W)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBW(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-B)', 'n') ==# ':<C-U>call EasyMotion#WBW(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-B)', 'o') ==# ':<C-U>call EasyMotion#WBW(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-B)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBW(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-W)', 'n') ==# ':<C-U>call EasyMotion#WBW(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-W)', 'o') ==# ':<C-U>call EasyMotion#WBW(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-W)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBW(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-W)', 'n') ==# ':<C-U>call EasyMotion#WBW(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-W)', 'o') ==# ':<C-U>call EasyMotion#WBW(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-W)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBW(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-B)', 'n') ==# ':<C-U>call EasyMotion#WBW(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-B)', 'o') ==# ':<C-U>call EasyMotion#WBW(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-B)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBW(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-W)', 'n') ==# ':<C-U>call EasyMotion#WBW(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-W)', 'o') ==# ':<C-U>call EasyMotion#WBW(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-W)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBW(1,2)<CR>'
         " }}}
 
         " Word Motion IsKeyWord: {{{
-        Expect maparg('<Plug>(easymotion-iskeyword-w)', 'n') ==# ':<C-U>call EasyMotion#WBK(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-w)', 'o') ==# ':<C-U>call EasyMotion#WBK(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBK(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-b)', 'n') ==# ':<C-U>call EasyMotion#WBK(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-b)', 'o') ==# ':<C-U>call EasyMotion#WBK(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-b)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBK(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-bd-w)', 'n') ==# ':<C-U>call EasyMotion#WBK(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-bd-w)', 'o') ==# ':<C-U>call EasyMotion#WBK(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-bd-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBK(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-w)', 'n') ==# ':<C-U>call EasyMotion#WBK(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-w)', 'o') ==# ':<C-U>call EasyMotion#WBK(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBK(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-b)', 'n') ==# ':<C-U>call EasyMotion#WBK(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-b)', 'o') ==# ':<C-U>call EasyMotion#WBK(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-b)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBK(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-bd-w)', 'n') ==# ':<C-U>call EasyMotion#WBK(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-bd-w)', 'o') ==# ':<C-U>call EasyMotion#WBK(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-bd-w)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBK(1,2)<CR>'
         " }}}
 
         " End Of Word Motion: {{{
-        Expect maparg('<Plug>(easymotion-e)', 'n')    ==# ':<C-U>call EasyMotion#E(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-e)', 'o')    ==# ':<C-U>call EasyMotion#E(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-e)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#E(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-ge)', 'n')   ==# ':<C-U>call EasyMotion#E(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-ge)', 'o')   ==# ':<C-U>call EasyMotion#E(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-ge)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#E(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-e)', 'n') ==# ':<C-U>call EasyMotion#E(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-e)', 'o') ==# ':<C-U>call EasyMotion#E(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-e)', 'v') ==# '<Esc>:<C-U>call EasyMotion#E(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-e)', 'n')    ==# ':<C-U>call EasyMotion#E(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-e)', 'o')    ==# ':<C-U>call EasyMotion#E(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-e)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#E(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-ge)', 'n')   ==# ':<C-U>call EasyMotion#E(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-ge)', 'o')   ==# ':<C-U>call EasyMotion#E(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-ge)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#E(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-e)', 'n') ==# ':<C-U>call EasyMotion#E(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-e)', 'o') ==# ':<C-U>call EasyMotion#E(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-e)', 'v') ==# '<Esc>:<C-U>call EasyMotion#E(1,2)<CR>'
         " }}}
 
         " END OF WORD Motion: {{{
-        Expect maparg('<Plug>(easymotion-E)', 'n')    ==# ':<C-U>call EasyMotion#EW(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-E)', 'o')    ==# ':<C-U>call EasyMotion#EW(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-E)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#EW(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-gE)', 'n')   ==# ':<C-U>call EasyMotion#EW(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-gE)', 'o')   ==# ':<C-U>call EasyMotion#EW(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-gE)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#EW(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-E)', 'n') ==# ':<C-U>call EasyMotion#EW(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-E)', 'o') ==# ':<C-U>call EasyMotion#EW(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-E)', 'v') ==# '<Esc>:<C-U>call EasyMotion#EW(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-E)', 'n')    ==# ':<C-U>call EasyMotion#EW(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-E)', 'o')    ==# ':<C-U>call EasyMotion#EW(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-E)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#EW(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-gE)', 'n')   ==# ':<C-U>call EasyMotion#EW(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-gE)', 'o')   ==# ':<C-U>call EasyMotion#EW(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-gE)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#EW(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-E)', 'n') ==# ':<C-U>call EasyMotion#EW(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-E)', 'o') ==# ':<C-U>call EasyMotion#EW(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-E)', 'v') ==# '<Esc>:<C-U>call EasyMotion#EW(1,2)<CR>'
         " }}}
 
         " End Of Word Motion IsKeyWord: {{{
-        Expect maparg('<Plug>(easymotion-iskeyword-e)', 'n')    ==# ':<C-U>call EasyMotion#EK(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-e)', 'o')    ==# ':<C-U>call EasyMotion#EK(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-e)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#EK(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-ge)', 'n')   ==# ':<C-U>call EasyMotion#EK(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-ge)', 'o')   ==# ':<C-U>call EasyMotion#EK(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-ge)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#EK(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-bd-e)', 'n') ==# ':<C-U>call EasyMotion#EK(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-bd-e)', 'o') ==# ':<C-U>call EasyMotion#EK(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-iskeyword-bd-e)', 'v') ==# '<Esc>:<C-U>call EasyMotion#EK(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-e)', 'n')    ==# ':<C-U>call EasyMotion#EK(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-e)', 'o')    ==# ':<C-U>call EasyMotion#EK(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-e)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#EK(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-ge)', 'n')   ==# ':<C-U>call EasyMotion#EK(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-ge)', 'o')   ==# ':<C-U>call EasyMotion#EK(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-ge)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#EK(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-bd-e)', 'n') ==# ':<C-U>call EasyMotion#EK(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-bd-e)', 'o') ==# ':<C-U>call EasyMotion#EK(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-iskeyword-bd-e)', 'v') ==# '<Esc>:<C-U>call EasyMotion#EK(1,2)<CR>'
         " }}}
 
         " JK Motion: {{{
         " default
-        Expect maparg('<Plug>(easymotion-j)', 'n') ==# ':<C-U>call EasyMotion#JK(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-j)', 'o') ==# ':<C-U>call EasyMotion#JK(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-j)', 'v') ==# '<Esc>:<C-U>call EasyMotion#JK(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-k)', 'n') ==# ':<C-U>call EasyMotion#JK(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-k)', 'o') ==# ':<C-U>call EasyMotion#JK(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-k)', 'v') ==# '<Esc>:<C-U>call EasyMotion#JK(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-jk)', 'n') ==# ':<C-U>call EasyMotion#JK(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-jk)', 'o') ==# ':<C-U>call EasyMotion#JK(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-jk)', 'v') ==# '<Esc>:<C-U>call EasyMotion#JK(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-j)', 'n') ==# ':<C-U>call EasyMotion#JK(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-j)', 'o') ==# ':<C-U>call EasyMotion#JK(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-j)', 'v') ==# '<Esc>:<C-U>call EasyMotion#JK(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-k)', 'n') ==# ':<C-U>call EasyMotion#JK(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-k)', 'o') ==# ':<C-U>call EasyMotion#JK(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-k)', 'v') ==# '<Esc>:<C-U>call EasyMotion#JK(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-jk)', 'n') ==# ':<C-U>call EasyMotion#JK(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-jk)', 'o') ==# ':<C-U>call EasyMotion#JK(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-jk)', 'v') ==# '<Esc>:<C-U>call EasyMotion#JK(1,2)<CR>'
         " start of line
-        Expect maparg('<Plug>(easymotion-sol-j)', 'n') ==# ':<C-U>call EasyMotion#Sol(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-j)', 'o') ==# ':<C-U>call EasyMotion#Sol(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-j)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Sol(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-k)', 'n') ==# ':<C-U>call EasyMotion#Sol(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-k)', 'o') ==# ':<C-U>call EasyMotion#Sol(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-k)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Sol(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-bd-jk)', 'n') ==# ':<C-U>call EasyMotion#Sol(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-bd-jk)', 'o') ==# ':<C-U>call EasyMotion#Sol(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-sol-bd-jk)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Sol(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-j)', 'n') ==# ':<C-U>call EasyMotion#Sol(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-j)', 'o') ==# ':<C-U>call EasyMotion#Sol(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-j)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Sol(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-k)', 'n') ==# ':<C-U>call EasyMotion#Sol(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-k)', 'o') ==# ':<C-U>call EasyMotion#Sol(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-k)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Sol(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-bd-jk)', 'n') ==# ':<C-U>call EasyMotion#Sol(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-bd-jk)', 'o') ==# ':<C-U>call EasyMotion#Sol(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-sol-bd-jk)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Sol(1,2)<CR>'
         " end of line
-        Expect maparg('<Plug>(easymotion-eol-j)', 'n') ==# ':<C-U>call EasyMotion#Eol(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-j)', 'o') ==# ':<C-U>call EasyMotion#Eol(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-j)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Eol(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-k)', 'n') ==# ':<C-U>call EasyMotion#Eol(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-k)', 'o') ==# ':<C-U>call EasyMotion#Eol(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-k)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Eol(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-bd-jk)', 'n') ==# ':<C-U>call EasyMotion#Eol(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-bd-jk)', 'o') ==# ':<C-U>call EasyMotion#Eol(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-eol-bd-jk)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Eol(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-j)', 'n') ==# ':<C-U>call EasyMotion#Eol(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-j)', 'o') ==# ':<C-U>call EasyMotion#Eol(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-j)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Eol(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-k)', 'n') ==# ':<C-U>call EasyMotion#Eol(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-k)', 'o') ==# ':<C-U>call EasyMotion#Eol(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-k)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Eol(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-bd-jk)', 'n') ==# ':<C-U>call EasyMotion#Eol(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-bd-jk)', 'o') ==# ':<C-U>call EasyMotion#Eol(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-eol-bd-jk)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Eol(1,2)<CR>'
         " }}}
 
         " Search Motion: {{{
-        Expect maparg('<Plug>(easymotion-n)', 'n') ==# ':<C-U>call EasyMotion#Search(0,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-n)', 'o') ==# ':<C-U>call EasyMotion#Search(0,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-n)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-N)', 'n') ==# ':<C-U>call EasyMotion#Search(0,1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-N)', 'o') ==# ':<C-U>call EasyMotion#Search(0,1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-N)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-n)', 'n') ==# ':<C-U>call EasyMotion#Search(0,2,0)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-n)', 'o') ==# ':<C-U>call EasyMotion#Search(0,2,0)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-n)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,2,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-n)', 'n') ==# ':<C-U>call EasyMotion#Search(0,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-n)', 'o') ==# ':<C-U>call EasyMotion#Search(0,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-n)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-N)', 'n') ==# ':<C-U>call EasyMotion#Search(0,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-N)', 'o') ==# ':<C-U>call EasyMotion#Search(0,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-N)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-n)', 'n') ==# ':<C-U>call EasyMotion#Search(0,2,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-n)', 'o') ==# ':<C-U>call EasyMotion#Search(0,2,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-n)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,2,0)<CR>'
 
         " respect previous direction
-        Expect maparg('<Plug>(easymotion-vim-n)', 'n') ==# ':<C-U>call EasyMotion#Search(0,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-vim-n)', 'o') ==# ':<C-U>call EasyMotion#Search(0,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-vim-n)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-vim-N)', 'n') ==# ':<C-U>call EasyMotion#Search(0,1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-vim-N)', 'o') ==# ':<C-U>call EasyMotion#Search(0,1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-vim-N)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-vim-n)', 'n') ==# ':<C-U>call EasyMotion#Search(0,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-vim-n)', 'o') ==# ':<C-U>call EasyMotion#Search(0,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-vim-n)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-vim-N)', 'n') ==# ':<C-U>call EasyMotion#Search(0,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-vim-N)', 'o') ==# ':<C-U>call EasyMotion#Search(0,1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-vim-N)', 'v') ==# '<Esc>:<C-U>call EasyMotion#Search(1,1,1)<CR>'
         " }}}
 
         " JumpToAnywhere Motion: {{{
-        Expect maparg('<Plug>(easymotion-jumptoanywhere)', 'n')
+        Expect maparg('<Plug>(easymotionvim-jumptoanywhere)', 'n')
             \ ==# ':<C-U>call EasyMotion#JumpToAnywhere(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-jumptoanywhere)', 'o')
+        Expect maparg('<Plug>(easymotionvim-jumptoanywhere)', 'o')
             \ ==# ':<C-U>call EasyMotion#JumpToAnywhere(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-jumptoanywhere)', 'v')
+        Expect maparg('<Plug>(easymotionvim-jumptoanywhere)', 'v')
             \ ==# '<Esc>:<C-U>call EasyMotion#JumpToAnywhere(1,2)<CR>'
         " }}}
 
         " Repeat Motion: {{{
         " (is_visual)
-        Expect maparg('<Plug>(easymotion-repeat)', 'n')
+        Expect maparg('<Plug>(easymotionvim-repeat)', 'n')
             \ ==# ':<C-U>call EasyMotion#Repeat(0)<CR>'
-        Expect maparg('<Plug>(easymotion-repeat)', 'o')
+        Expect maparg('<Plug>(easymotionvim-repeat)', 'o')
             \ ==# ':<C-U>call EasyMotion#Repeat(0)<CR>'
-        Expect maparg('<Plug>(easymotion-repeat)', 'v')
+        Expect maparg('<Plug>(easymotionvim-repeat)', 'v')
             \ ==# '<Esc>:<C-U>call EasyMotion#Repeat(1)<CR>'
-        Expect maparg('<Plug>(easymotion-dotrepeat)', 'n')
+        Expect maparg('<Plug>(easymotionvim-dotrepeat)', 'n')
             \ ==# ':<C-U>call EasyMotion#DotRepeat()<CR>'
-        Expect maparg('<Plug>(easymotion-dotrepeat)', 'o')
+        Expect maparg('<Plug>(easymotionvim-dotrepeat)', 'o')
             \ ==# ':<C-U>call EasyMotion#DotRepeat()<CR>'
-        Expect maparg('<Plug>(easymotion-dotrepeat)', 'v')
+        Expect maparg('<Plug>(easymotionvim-dotrepeat)', 'v')
             \ ==# ':<C-U>call EasyMotion#DotRepeat()<CR>'
         " }}}
 
         " Next, Previous motion {{{
-        Expect maparg('<Plug>(easymotion-next)', 'n')
+        Expect maparg('<Plug>(easymotionvim-next)', 'n')
             \ ==# ':<C-U>call EasyMotion#NextPrevious(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-next)', 'o')
+        Expect maparg('<Plug>(easymotionvim-next)', 'o')
             \ ==# ':<C-U>call EasyMotion#NextPrevious(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-next)', 'v')
+        Expect maparg('<Plug>(easymotionvim-next)', 'v')
             \ ==# ':<C-U>call EasyMotion#NextPrevious(1,0)<CR>'
 
-        Expect maparg('<Plug>(easymotion-prev)', 'n')
+        Expect maparg('<Plug>(easymotionvim-prev)', 'n')
             \ ==# ':<C-U>call EasyMotion#NextPrevious(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-prev)', 'o')
+        Expect maparg('<Plug>(easymotionvim-prev)', 'o')
             \ ==# ':<C-U>call EasyMotion#NextPrevious(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-prev)', 'v')
+        Expect maparg('<Plug>(easymotionvim-prev)', 'v')
             \ ==# ':<C-U>call EasyMotion#NextPrevious(1,1)<CR>'
         " }}}
 
         " Line Motion: {{{
         " word
-        Expect maparg('<Plug>(easymotion-wl)', 'n') ==# ':<C-U>call EasyMotion#WBL(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-wl)', 'o') ==# ':<C-U>call EasyMotion#WBL(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-wl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBL(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-bl)', 'n') ==# ':<C-U>call EasyMotion#WBL(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bl)', 'o') ==# ':<C-U>call EasyMotion#WBL(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBL(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-wl)', 'n') ==# ':<C-U>call EasyMotion#WBL(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-wl)', 'o') ==# ':<C-U>call EasyMotion#WBL(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-wl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBL(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-wl)', 'n') ==# ':<C-U>call EasyMotion#WBL(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-wl)', 'o') ==# ':<C-U>call EasyMotion#WBL(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-wl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBL(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bl)', 'n') ==# ':<C-U>call EasyMotion#WBL(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bl)', 'o') ==# ':<C-U>call EasyMotion#WBL(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBL(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-wl)', 'n') ==# ':<C-U>call EasyMotion#WBL(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-wl)', 'o') ==# ':<C-U>call EasyMotion#WBL(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-wl)', 'v') ==# '<Esc>:<C-U>call EasyMotion#WBL(1,2)<CR>'
         " end of word
-        Expect maparg('<Plug>(easymotion-el)', 'n')    ==# ':<C-U>call EasyMotion#EL(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-el)', 'o')    ==# ':<C-U>call EasyMotion#EL(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-el)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#EL(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-gel)', 'n')   ==# ':<C-U>call EasyMotion#EL(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-gel)', 'o')   ==# ':<C-U>call EasyMotion#EL(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-gel)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#EL(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-el)', 'n') ==# ':<C-U>call EasyMotion#EL(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-el)', 'o') ==# ':<C-U>call EasyMotion#EL(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-bd-el)', 'v') ==# '<Esc>:<C-U>call EasyMotion#EL(1,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-el)', 'n')    ==# ':<C-U>call EasyMotion#EL(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-el)', 'o')    ==# ':<C-U>call EasyMotion#EL(0,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-el)', 'v')    ==# '<Esc>:<C-U>call EasyMotion#EL(1,0)<CR>'
+        Expect maparg('<Plug>(easymotionvim-gel)', 'n')   ==# ':<C-U>call EasyMotion#EL(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-gel)', 'o')   ==# ':<C-U>call EasyMotion#EL(0,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-gel)', 'v')   ==# '<Esc>:<C-U>call EasyMotion#EL(1,1)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-el)', 'n') ==# ':<C-U>call EasyMotion#EL(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-el)', 'o') ==# ':<C-U>call EasyMotion#EL(0,2)<CR>'
+        Expect maparg('<Plug>(easymotionvim-bd-el)', 'v') ==# '<Esc>:<C-U>call EasyMotion#EL(1,2)<CR>'
         " LineAnywhere
-        Expect maparg('<Plug>(easymotion-lineforward)', 'n')
+        Expect maparg('<Plug>(easymotionvim-lineforward)', 'n')
             \ ==# ':<C-U>call EasyMotion#LineAnywhere(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-lineforward)', 'o')
+        Expect maparg('<Plug>(easymotionvim-lineforward)', 'o')
             \ ==# ':<C-U>call EasyMotion#LineAnywhere(0,0)<CR>'
-        Expect maparg('<Plug>(easymotion-lineforward)', 'v')
+        Expect maparg('<Plug>(easymotionvim-lineforward)', 'v')
             \ ==# '<Esc>:<C-U>call EasyMotion#LineAnywhere(1,0)<CR>'
-        Expect maparg('<Plug>(easymotion-linebackward)', 'n')
+        Expect maparg('<Plug>(easymotionvim-linebackward)', 'n')
             \ ==# ':<C-U>call EasyMotion#LineAnywhere(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-linebackward)', 'o')
+        Expect maparg('<Plug>(easymotionvim-linebackward)', 'o')
             \ ==# ':<C-U>call EasyMotion#LineAnywhere(0,1)<CR>'
-        Expect maparg('<Plug>(easymotion-linebackward)', 'v')
+        Expect maparg('<Plug>(easymotionvim-linebackward)', 'v')
             \ ==# '<Esc>:<C-U>call EasyMotion#LineAnywhere(1,1)<CR>'
-        Expect maparg('<Plug>(easymotion-lineanywhere)', 'n')
+        Expect maparg('<Plug>(easymotionvim-lineanywhere)', 'n')
             \ ==# ':<C-U>call EasyMotion#LineAnywhere(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-lineanywhere)', 'o')
+        Expect maparg('<Plug>(easymotionvim-lineanywhere)', 'o')
             \ ==# ':<C-U>call EasyMotion#LineAnywhere(0,2)<CR>'
-        Expect maparg('<Plug>(easymotion-lineanywhere)', 'v')
+        Expect maparg('<Plug>(easymotionvim-lineanywhere)', 'v')
             \ ==# '<Esc>:<C-U>call EasyMotion#LineAnywhere(1,2)<CR>'
         " }}}
 
         " Activate {{{
-        Expect maparg('<Plug>(easymotion-activate)', 'n')
+        Expect maparg('<Plug>(easymotionvim-activate)', 'n')
             \ ==# ':<C-U>call EasyMotion#activate(0)<CR>'
-        Expect maparg('<Plug>(easymotion-activate)', 'o')
+        Expect maparg('<Plug>(easymotionvim-activate)', 'o')
             \ ==# ':<C-U>call EasyMotion#activate(0)<CR>'
-        Expect maparg('<Plug>(easymotion-activate)', 'v')
+        Expect maparg('<Plug>(easymotionvim-activate)', 'v')
             \ ==# ':<C-U>call EasyMotion#activate(1)<CR>'
         " }}}
     end
@@ -527,11 +527,11 @@ describe 's, f, F, t and T mappings'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('poge huga hiyo poyo')
     end
@@ -682,11 +682,11 @@ describe 'a non-existent char'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('poge huga hiyo poyo')
     end
@@ -720,11 +720,11 @@ describe 'when target is in other line, s, f and F mappings'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('foo bar baz')         " L2
         call AddLine('poge huga hiyo poyo') " L1
@@ -780,11 +780,11 @@ describe 'Multibyte characters'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('ビムかわいいよzビムx')
         call AddLine('foo bar baz')
@@ -842,11 +842,11 @@ describe 'migemo support'
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let g:EasyMotion_use_migemo = 1
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('はー，ビムかわいいよビム')
         normal! gg0
@@ -898,11 +898,11 @@ describe 'g:EasyMotion_smartcase'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('poHe huga Hiyo hoyo: poyo();')
                       1234567890123456789012345678
@@ -985,11 +985,11 @@ describe 'g:EasyMotion_smartsign'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('poHe huga Hiyo hoyo: poyo();')
         "             1234567890123456789012345678
@@ -1041,13 +1041,13 @@ end
 "}}}
 
 " Next & Previous {{{
-describe '<Plug>(easymotion-next) & <Plug>(easymotion-prev)'
+describe '<Plug>(easymotionvim-next) & <Plug>(easymotion-prev)'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
-        map ; <Plug>(easymotion-next)
-        map , <Plug>(easymotion-prev)
+        map s <Plug>(easymotionvim-s)
+        map ; <Plug>(easymotionvim-next)
+        map , <Plug>(easymotionvim-prev)
         set wrapscan
         call EasyMotion#init()
         call AddLine('poge huga hiyo poyo')
@@ -1125,7 +1125,7 @@ describe 'EasyMotion is jump motion'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map s <Plug>(easymotion-s)
+        map s <Plug>(easymotionvim-s)
         call EasyMotion#init()
         call AddLine('poge huga hiyo poyo')
         "             1234567890123456789
@@ -1170,7 +1170,7 @@ describe 'EasyMotion regexp'
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let g:EasyMotion_use_regexp = 1
-        map s <Plug>(easymotion-sn)
+        map s <Plug>(easymotionvim-sn)
         call EasyMotion#init()
         call AddLine('poge1 2huga 3hiyo 4poyo')
         "             12345678901234567890123
@@ -1210,7 +1210,7 @@ describe 'bi-directional t motion'
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let g:EasyMotion_use_regexp = 1
-        map t <Plug>(easymotion-bd-t)
+        map t <Plug>(easymotionvim-bd-t)
         call EasyMotion#init()
         call AddLine('poge1 2huga 3hiyo 4poyo')
         "             12345678901234567890123
@@ -1246,11 +1246,11 @@ describe 'off-screen search'
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let g:EasyMotion_off_screen_search = 1
-        map s/ <Plug>(easymotion-sn)
-        map f/ <Plug>(easymotion-fn)
-        map F/ <Plug>(easymotion-Fn)
-        map t/ <Plug>(easymotion-tn)
-        map T/ <Plug>(easymotion-Tn)
+        map s/ <Plug>(easymotionvim-sn)
+        map f/ <Plug>(easymotionvim-fn)
+        map F/ <Plug>(easymotionvim-Fn)
+        map t/ <Plug>(easymotionvim-tn)
+        map T/ <Plug>(easymotionvim-Tn)
         call EasyMotion#init()
         call AddLine('deco-chan deco-chan')
         call AddLine('vim')
@@ -1319,7 +1319,7 @@ describe 'dot notoff-screen search'
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let g:EasyMotion_off_screen_search = 0
-        map s/ <Plug>(easymotion-sn)
+        map s/ <Plug>(easymotionvim-sn)
         call EasyMotion#init()
         call AddLine('deco-chan deco-chan')
         call AddLine('vim')
@@ -1353,7 +1353,7 @@ describe 'off-screen search scroll'
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let g:EasyMotion_off_screen_search = 1
-        map / <Plug>(easymotion-sn)
+        map / <Plug>(easymotionvim-sn)
         call EasyMotion#init()
         call AddLine('deco-chan deco-chan')
         call AddLine('vim')
@@ -1393,10 +1393,10 @@ describe 'Word motion'
     before
         new
         let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        map w <Plug>(easymotion-w)
-        map b <Plug>(easymotion-b)
-        map <Leader>w <Plug>(easymotion-iskeyword-w)
-        map <Leader>b <Plug>(easymotion-iskeyword-b)
+        map w <Plug>(easymotionvim-w)
+        map b <Plug>(easymotionvim-b)
+        map <Leader>w <Plug>(easymotionvim-iskeyword-w)
+        map <Leader>b <Plug>(easymotionvim-iskeyword-b)
         call EasyMotion#init()
         call AddLine('vim vim vim')
         call AddLine('poge1 2huga 3hiyo 4poyo 5:test')
@@ -1436,11 +1436,11 @@ end
 describe 'Verbose'
     before
         new
-        map s <Plug>(easymotion-s)
-        map f <Plug>(easymotion-f)
-        map F <Plug>(easymotion-F)
-        map t <Plug>(easymotion-t)
-        map T <Plug>(easymotion-T)
+        map s <Plug>(easymotionvim-s)
+        map f <Plug>(easymotionvim-f)
+        map F <Plug>(easymotionvim-F)
+        map t <Plug>(easymotionvim-t)
+        map T <Plug>(easymotionvim-T)
         call EasyMotion#init()
         call AddLine('some words in the sentence')
     end
