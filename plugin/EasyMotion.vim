@@ -75,13 +75,13 @@ function! s:motion_map_helper(motions) "{{{
             let xmapargs += [1, dict.direction]
         endif
 
-        silent exec 'noremap  <silent><Plug>(easymotion-'.name.')' .
+        silent exec 'noremap  <silent><Plug>(easymotionvim-'.name.')' .
             \ '      :<C-u>call EasyMotion#' . dict.fnc . '('. join(mapargs, ',') . ')<CR>'
-        silent exec 'xnoremap <silent><Plug>(easymotion-'.name.')' .
+        silent exec 'xnoremap <silent><Plug>(easymotionvim-'.name.')' .
             \ ' <Esc>:<C-u>call EasyMotion#' . dict.fnc . '('. join(xmapargs, ',') . ')<CR>'
     " Example:
-    " noremap  <silent><Plug>(easymotion-f2) :<C-u>call EasyMotion#S(2,1,0)<CR>
-    " xnoremap <silent><Plug>(easymotion-f2) <Esc>:<C-u>call EasyMotion#S(2,1,0)<CR>
+    " noremap  <silent><Plug>(easymotionvim-f2) :<C-u>call EasyMotion#S(2,1,0)<CR>
+    " xnoremap <silent><Plug>(easymotionvim-f2) <Esc>:<C-u>call EasyMotion#S(2,1,0)<CR>
     endfor
 endfunction "}}}
 
@@ -133,10 +133,10 @@ call s:motion_map_helper({
     \ 'bd-tln'          : {'fnc' : 'TL' , 'cnt' : -1, 'direction' : 2},
     \ })
 
-nnoremap <silent> <Plug>(easymotion-overwin-f) :<C-u>call EasyMotion#OverwinF(1)<CR>
-nnoremap <silent> <Plug>(easymotion-overwin-f2) :<C-u>call EasyMotion#OverwinF(2)<CR>
-nnoremap <silent> <Plug>(easymotion-overwin-line) :<C-u>call EasyMotion#overwin#line()<CR>
-nnoremap <silent> <Plug>(easymotion-overwin-w) :<C-u>call EasyMotion#overwin#w()<CR>
+nnoremap <silent> <Plug>(easymotionvim-overwin-f) :<C-u>call EasyMotion#OverwinF(1)<CR>
+nnoremap <silent> <Plug>(easymotionvim-overwin-f2) :<C-u>call EasyMotion#OverwinF(2)<CR>
+nnoremap <silent> <Plug>(easymotionvim-overwin-line) :<C-u>call EasyMotion#overwin#line()<CR>
+nnoremap <silent> <Plug>(easymotionvim-overwin-w) :<C-u>call EasyMotion#overwin#w()<CR>
 
 "}}}
 
@@ -209,39 +209,39 @@ call s:motion_map_helper({
 "}}}
 
 " -- Next, Previous Motion {{{
-noremap  <silent><Plug>(easymotion-next)
+noremap  <silent><Plug>(easymotionvim-next)
     \      :<C-u>call EasyMotion#NextPrevious(0,0)<CR>
-xnoremap <silent><Plug>(easymotion-next)
+xnoremap <silent><Plug>(easymotionvim-next)
     \      :<C-u>call EasyMotion#NextPrevious(1,0)<CR>
 
-noremap  <silent><Plug>(easymotion-prev)
+noremap  <silent><Plug>(easymotionvim-prev)
     \      :<C-u>call EasyMotion#NextPrevious(0,1)<CR>
-xnoremap <silent><Plug>(easymotion-prev)
+xnoremap <silent><Plug>(easymotionvim-prev)
     \      :<C-u>call EasyMotion#NextPrevious(1,1)<CR>
 "}}}
 
 " -- Repeat Motion {{{
-noremap  <silent><Plug>(easymotion-repeat)
+noremap  <silent><Plug>(easymotionvim-repeat)
     \      :<C-u>call EasyMotion#Repeat(0)<CR>
-xnoremap <silent><Plug>(easymotion-repeat)
+xnoremap <silent><Plug>(easymotionvim-repeat)
     \ <Esc>:<C-u>call EasyMotion#Repeat(1)<CR>
 
-noremap  <silent><Plug>(easymotion-dotrepeat)
+noremap  <silent><Plug>(easymotionvim-dotrepeat)
     \      :<C-u>call EasyMotion#DotRepeat()<CR>
 "}}}
 
-noremap  <silent><Plug>(easymotion-activate) :<C-u>call EasyMotion#activate(0)<CR>
-xnoremap <silent><Plug>(easymotion-activate) :<C-u>call EasyMotion#activate(1)<CR>
+noremap  <silent><Plug>(easymotionvim-activate) :<C-u>call EasyMotion#activate(0)<CR>
+xnoremap <silent><Plug>(easymotionvim-activate) :<C-u>call EasyMotion#activate(1)<CR>
 " }}}
 
 " == Default key mapping {{{
 if g:EasyMotion_do_mapping == 1
     " Prepare Prefix: {{{
     if exists('g:EasyMotion_leader_key')
-        exec 'map ' . g:EasyMotion_leader_key . ' <Plug>(easymotion-prefix)'
+        exec 'map ' . g:EasyMotion_leader_key . ' <Plug>(easymotionvim-prefix)'
     else
-        if !hasmapto('<Plug>(easymotion-prefix)')
-            map <Leader><Leader> <Plug>(easymotion-prefix)
+        if !hasmapto('<Plug>(easymotionvim-prefix)')
+            map <Leader><Leader> <Plug>(easymotionvim-prefix)
         endif
     endif
     "}}}
@@ -252,14 +252,14 @@ if g:EasyMotion_do_mapping == 1
             if exists('g:EasyMotion_mapping_' . motion)
                 " Backward compatible mapping [deprecated]
                 silent exec 'map <silent> ' .
-                    \ eval('g:EasyMotion_mapping_' . motion) . ' <Plug>(easymotion-' . motion . ')'
+                    \ eval('g:EasyMotion_mapping_' . motion) . ' <Plug>(easymotionvim-' . motion . ')'
             elseif a:do_mapping
-                    \ && !hasmapto('<Plug>(easymotion-' . motion . ')')
-                    \ && empty(maparg('<Plug>(easymotion-prefix)' . motion, 'nov'))
+                    \ && !hasmapto('<Plug>(easymotionvim-' . motion . ')')
+                    \ && empty(maparg('<Plug>(easymotionvim-prefix)' . motion, 'nov'))
 
                 " Do mapping
                 silent exec 'map <silent> ' .
-                    \'<Plug>(easymotion-prefix)' . motion . ' <Plug>(easymotion-' . motion . ')'
+                    \'<Plug>(easymotionvim-prefix)' . motion . ' <Plug>(easymotion-' . motion . ')'
             endif "}}}
         endfor
     endfunction "}}}
